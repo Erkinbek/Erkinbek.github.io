@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erkin Pardayev — free tools for huge text, CSV and JSON files</title>
+  <meta name="description" content="Free, open-source desktop tools for files too big for ordinary editors: BigText opens 50 GB text and log files, Katak huge CSV and TSV files, jsonreshape multi-GB JSON. Windows, Linux and macOS.">
+  <link rel="canonical" href="https://erkinbek.github.io/">
+  <meta name="author" content="Erkin Pardayev">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Erkin Pardayev">
+  <meta property="og:title" content="Free tools for huge text, CSV and JSON files">
+  <meta property="og:description" content="BigText opens 50 GB text and log files, Katak huge CSV and TSV files, jsonreshape multi-GB JSON. Free and open source for Windows, Linux and macOS.">
+  <meta property="og:url" content="https://erkinbek.github.io/">
+  <meta property="og:image" content="https://erkinbek.github.io/bigtext/img/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="BigText — open 50 GB text files instantly">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://erkinbek.github.io/#website",
+   "url": "https://erkinbek.github.io/",
+   "name": "Erkin Pardayev",
+   "alternateName": ["Erkinbek", "erkinbek.github.io"],
+   "inLanguage": "en",
+   "publisher": {"@id": "https://erkinbek.github.io/#person"}
+  },
+  {
+   "@type": "Person",
+   "@id": "https://erkinbek.github.io/#person",
+   "name": "Erkin Pardayev",
+   "url": "https://erkinbek.github.io/",
+   "sameAs": ["https://github.com/Erkinbek"]
+  }
+ ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #131a27;
+      --border: #223047;
+      --text: #e6e9ef;
+      --muted: #9aa6b8;
+      --accent: #2dd4bf;
+      --accent-ink: #04201c;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fc;
+        --card: #ffffff;
+        --border: #d9e1ec;
+        --text: #0f172a;
+        --muted: #4b5a70;
+        --accent: #0f766e;
+        --accent-ink: #ffffff;
+        color-scheme: light;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; }
+    .brand img { display: block; }
+    header nav a { color: var(--muted); text-decoration: none; }
+    header nav a:hover { color: var(--text); }
+    .intro { padding: 40px 0 28px; }
+    h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); font-size: 19px; max-width: 46em; margin: 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding-bottom: 48px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+    .card.main { grid-column: 1 / -1; }
+    .card h2 { margin: 0; font-size: 24px; display: flex; align-items: center; gap: 12px; }
+    .card.main h2 { font-size: 30px; }
+    .card h2 img { flex: none; border-radius: 10px; }
+    .card p { margin: 0; color: var(--muted); }
+    .card .what { color: var(--text); font-weight: 600; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 4px; }
+    .btn { display: inline-block; padding: 9px 16px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+    .langs { font-size: 15px; }
+    .langs a { text-decoration: none; margin-right: 10px; white-space: nowrap; }
+    footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 15px; }
+    footer .wrap { padding-top: 20px; padding-bottom: 28px; }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      .intro { padding-top: 20px; }
+      .lead { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="favicon.svg" width="28" height="28" alt="">Erkin Pardayev</a>
+    <nav><a href="https://github.com/Erkinbek">GitHub</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section class="intro">
+      <h1>Free tools for files too big to open</h1>
+      <p class="lead">Desktop apps that open, search and edit multi-gigabyte text, log, CSV and JSON files without loading them into memory. Free and open source, for Windows, Linux and macOS.</p>
+    </section>
+    <div class="grid">
+      <article class="card main">
+        <h2><img src="bigtext/img/logo.svg" width="56" height="56" alt=""><a href="bigtext/">BigText</a></h2>
+        <p class="what">Editor for huge text and log files.</p>
+        <p>Opens a 50 GB file at once, searches at 2.5 GB/s, edits and saves safely, and never freezes. Regex search, file compare, hex view, JSON and CSV views, and a command-line tool. A free alternative to EmEditor and UltraEdit, written in Rust.</p>
+        <p class="langs">Also in:
+          <a href="bigtext/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a href="bigtext/uz/" hreflang="uz" lang="uz">O'zbekcha</a>
+          <a href="bigtext/zh/" hreflang="zh" lang="zh">中文</a>
+          <a href="bigtext/es/" hreflang="es" lang="es">Español</a>
+          <a href="bigtext/pt/" hreflang="pt" lang="pt">Português</a>
+          <a href="bigtext/de/" hreflang="de" lang="de">Deutsch</a>
+          <a href="bigtext/tr/" hreflang="tr" lang="tr">Türkçe</a>
+        </p>
+        <div class="links">
+          <a class="btn primary" href="bigtext/">BigText website</a>
+          <a class="btn" href="https://github.com/Erkinbek/bigtext/releases/latest">Download</a>
+          <a class="btn" href="https://github.com/Erkinbek/bigtext">Source on GitHub</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><img src="katak/images/logo.svg" width="44" height="44" alt=""><a href="katak/">Katak</a></h2>
+        <p class="what">Viewer and editor for huge CSV and TSV files.</p>
+        <p>Opens 10 GB in 0.2 s, searches at 1 GB/s, filters, sorts, edits and converts without loading the file into RAM. A single native binary, written in Rust.</p>
+        <div class="links">
+          <a class="btn" href="katak/">Katak website</a>
+          <a class="btn" href="https://github.com/Erkinbek/katak">GitHub</a>
+        </div>
+      </article>
+      <article class="card">
+        <h2><img src="jsonreshape/assets/images/favicon.png" width="44" height="44" alt=""><a href="jsonreshape/">jsonreshape</a></h2>
+        <p class="what">Viewer, editor and reshaper for huge JSON files.</p>
+        <p>Opens JSON and JSON Lines files from 100 MB to several GB: search, filter, sort, edit, split and merge, repair, diff, and export to CSV, XLSX, SQLite or Parquet. Works offline.</p>
+        <div class="links">
+          <a class="btn" href="jsonreshape/">jsonreshape website</a>
+          <a class="btn" href="https://github.com/Erkinbek/jsonreshape">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">Erkin Pardayev · <a href="https://github.com/Erkinbek">github.com/Erkinbek</a></div>
+</footer>
+</body>
+</html>

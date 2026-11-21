@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erkinbek.github.io/sitemap.xml
+Sitemap: https://erkinbek.github.io/bigtext/sitemap.xml
+Sitemap: https://erkinbek.github.io/katak/sitemap.xml
+Sitemap: https://erkinbek.github.io/jsonreshape/sitemap.xml
